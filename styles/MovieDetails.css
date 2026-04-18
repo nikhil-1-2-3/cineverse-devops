@@ -1,0 +1,345 @@
+.movie-details-page {
+  padding-top: 120px;
+  min-height: 100vh;
+  position: relative;
+}
+
+.back-button {
+  position: absolute;
+  top: 100px;
+  left: 2rem;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  color: var(--text-primary);
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all var(--transition-fast);
+  z-index: 10;
+}
+
+.back-button:hover {
+  background: var(--glass-bg-hover);
+  border-color: var(--accent-red);
+  transform: translateX(-5px);
+}
+
+.details-content {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 4rem;
+  align-items: start;
+  margin-bottom: 4rem;
+}
+
+.details-poster {
+  position: sticky;
+  top: 120px;
+}
+
+.details-poster img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+  border: 2px solid var(--glass-border);
+}
+
+.details-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.details-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.details-badges {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.badge {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+}
+
+.badge-icon {
+  color: var(--accent-red);
+  font-size: 1.2rem;
+}
+
+.rating-badge {
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+  border-color: rgba(255, 215, 0, 0.3);
+}
+
+.details-genres {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.genre-pill {
+  background: var(--gradient-primary);
+  padding: 0.6rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.details-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+.theatre-selection,
+.showtime-selection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.selection-label {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+
+.theatre-dropdown {
+  background: var(--glass-bg);
+  border: 2px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  color: var(--text-primary);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.theatre-dropdown:focus {
+  border-color: var(--accent-red);
+  box-shadow: 0 0 20px rgba(229, 9, 20, 0.3);
+}
+
+.theatre-dropdown option {
+  background: var(--secondary-dark);
+  color: var(--text-primary);
+}
+
+.showtime-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.showtime-button {
+  background: var(--glass-bg);
+  border: 2px solid var(--glass-border);
+  color: var(--text-primary);
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all var(--transition-fast);
+}
+
+.showtime-button:hover {
+  border-color: var(--accent-red);
+  background: var(--glass-bg-hover);
+  transform: translateY(-2px);
+}
+
+.showtime-button.active {
+  background: var(--gradient-primary);
+  border-color: transparent;
+  box-shadow: var(--shadow-glow);
+}
+
+.details-actions {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.select-seats-button {
+  flex: 1;
+  padding: 1.2rem 2rem;
+  font-size: 1.1rem;
+}
+
+.trailer-button {
+  background: var(--glass-bg);
+  border: 2px solid var(--glass-border);
+  color: var(--text-primary);
+  padding: 1.2rem 2rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all var(--transition-base);
+  backdrop-filter: blur(10px);
+}
+
+.trailer-button:hover {
+  background: var(--glass-bg-hover);
+  border-color: var(--neon-blue);
+  transform: translateY(-2px);
+}
+
+/* Trailer Modal */
+.trailer-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 2rem;
+}
+
+.trailer-content {
+  background: var(--secondary-dark);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  max-width: 900px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.close-modal {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  color: var(--text-primary);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  transition: all var(--transition-fast);
+  z-index: 10;
+}
+
+.close-modal:hover {
+  background: var(--accent-red);
+  transform: rotate(90deg);
+}
+
+.trailer-placeholder {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--text-secondary);
+}
+
+.trailer-placeholder h2 {
+  color: var(--text-primary);
+  font-size: 2rem;
+}
+
+.not-found {
+  padding-top: 150px;
+  text-align: center;
+}
+
+.not-found h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .details-content {
+    grid-template-columns: 350px 1fr;
+    gap: 3rem;
+  }
+
+  .details-poster img {
+    height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .back-button {
+    top: 80px;
+    left: 1rem;
+  }
+
+  .details-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .details-poster {
+    position: relative;
+    top: 0;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .details-poster img {
+    height: 450px;
+  }
+
+  .details-title {
+    font-size: 2rem;
+  }
+
+  .details-actions {
+    flex-direction: column;
+  }
+
+  .showtime-buttons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .trailer-placeholder {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .details-badges {
+    gap: 1rem;
+  }
+
+  .badge {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .showtime-buttons {
+    grid-template-columns: 1fr;
+  }
+}

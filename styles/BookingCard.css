@@ -1,0 +1,232 @@
+.booking-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  transition: all var(--transition-base);
+  position: relative;
+}
+
+.booking-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--glass-border-light);
+}
+
+.booking-card-content {
+  display: flex;
+  position: relative;
+}
+
+.booking-poster-section {
+  position: relative;
+  flex-shrink: 0;
+  width: 150px;
+  height: 220px;
+  border-right: 3px solid var(--accent-red);
+}
+
+.booking-poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.booking-status-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: var(--gradient-secondary);
+  color: var(--primary-dark);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.booking-details {
+  flex: 1;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.booking-movie-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.booking-info-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.booking-info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.info-icon {
+  color: var(--accent-red);
+  font-size: 1.1rem;
+}
+
+.booking-seats {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.seats-label {
+  color: var(--text-secondary);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.seats-list {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.seat-badge {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  padding: 4px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.booking-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid var(--glass-border);
+}
+
+.total-label {
+  color: var(--text-secondary);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.total-amount {
+  font-size: 1.5rem;
+  font-weight: 800;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cancel-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: rgba(229, 9, 20, 0.1);
+  border: 1px solid var(--accent-red);
+  color: var(--accent-red);
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all var(--transition-fast);
+  margin-top: auto;
+}
+
+.cancel-button:hover {
+  background: var(--accent-red);
+  color: var(--text-primary);
+  box-shadow: 0 0 20px rgba(229, 9, 20, 0.5);
+}
+
+/* Barcode */
+.booking-barcode {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  gap: 2px;
+  opacity: 0.3;
+  transform: rotate(90deg);
+}
+
+.barcode-line {
+  height: 40px;
+  background: var(--text-primary);
+}
+
+/* Perforated edge effect */
+.booking-card::after {
+  content: '';
+  position: absolute;
+  left: 150px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 10px,
+    var(--primary-dark) 10px,
+    var(--primary-dark) 20px
+  );
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .booking-card-content {
+    flex-direction: column;
+  }
+
+  .booking-poster-section {
+    width: 100%;
+    height: 200px;
+    border-right: none;
+    border-bottom: 3px solid var(--accent-red);
+  }
+
+  .booking-card::after {
+    left: 0;
+    right: 0;
+    top: 200px;
+    bottom: auto;
+    width: 100%;
+    height: 3px;
+    background: repeating-linear-gradient(
+      to right,
+      transparent,
+      transparent 10px,
+      var(--primary-dark) 10px,
+      var(--primary-dark) 20px
+    );
+  }
+
+  .booking-barcode {
+    display: none;
+  }
+
+  .booking-movie-title {
+    font-size: 1.2rem;
+  }
+
+  .total-amount {
+    font-size: 1.3rem;
+  }
+}

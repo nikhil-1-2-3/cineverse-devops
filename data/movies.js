@@ -1,0 +1,161 @@
+export const movies = [
+  {
+    id: "mov_1",
+    title: "Inception",
+    poster: "https://image.tmdb.org/t/p/w500/9gk7adHYeDvHkCSEhniVnh2MQ7K.jpg",
+    backdrop: "https://image.tmdb.org/t/p/original/s3TBrRGB1iav7gFOCNx3H31MoES.jpg",
+    rating: 8.8,
+    genre: ["Sci-Fi", "Action", "Thriller"],
+    duration: "148 min",
+    description: "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and strain his abilities.",
+    showtimes: ["10:00 AM", "1:30 PM", "5:00 PM", "8:30 PM"],
+    price: 12.99,
+    featured: true,
+    year: 2010
+  },
+  {
+    id: "mov_2",
+    title: "The Dark Knight",
+    poster: "https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911BTUgMe1nNaD.jpg",
+    backdrop: "https://image.tmdb.org/t/p/original/nMKdUUepq0i5zn0y1X448fCl6FE.jpg",
+    rating: 9.0,
+    genre: ["Action", "Crime", "Drama"],
+    duration: "152 min",
+    description: "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
+    showtimes: ["11:00 AM", "2:30 PM", "6:00 PM", "9:30 PM"],
+    price: 13.99,
+    featured: true,
+    year: 2008
+  },
+  {
+    id: "mov_3",
+    title: "Interstellar",
+    poster: "https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
+    backdrop: "https://image.tmdb.org/t/p/original/xJHokMbljvjGPYD6aMfzpEgEMNE.jpg",
+    rating: 8.6,
+    genre: ["Sci-Fi", "Adventure", "Drama"],
+    duration: "169 min",
+    description: "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival as Earth becomes uninhabitable.",
+    showtimes: ["9:30 AM", "1:00 PM", "4:30 PM", "8:00 PM"],
+    price: 14.99,
+    featured: true,
+    year: 2014
+  },
+  {
+    id: "mov_4",
+    title: "Avengers: Endgame",
+    poster: "https://image.tmdb.org/t/p/w500/or06FN3Dka5tukK1e9sl16pB3iy.jpg",
+    backdrop: "https://image.tmdb.org/t/p/original/7RyHsO4yDXtBv1zUU3mTpHeQ0d5.jpg",
+    rating: 8.4,
+    genre: ["Action", "Adventure", "Sci-Fi"],
+    duration: "181 min",
+    description: "After the devastating events of Infinity War, the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.",
+    showtimes: ["10:30 AM", "2:00 PM", "5:30 PM", "9:00 PM"],
+    price: 15.99,
+    featured: false,
+    year: 2019
+  },
+  {
+    id: "mov_5",
+    title: "The Matrix",
+    poster: "https://image.tmdb.org/t/p/w500/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg",
+    backdrop: "https://image.tmdb.org/t/p/original/fNG7i7RqMErfeqhIcgDMSm699E6.jpg",
+    rating: 8.7,
+    genre: ["Sci-Fi", "Action"],
+    duration: "136 min",
+    description: "When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth--the life he knows is the elaborate deception of an evil cyber-intelligence.",
+    showtimes: ["11:30 AM", "3:00 PM", "6:30 PM", "10:00 PM"],
+    price: 11.99,
+    featured: false,
+    year: 1999
+  },
+  {
+    id: "mov_6",
+    title: "Parasite",
+    poster: "https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg",
+    backdrop: "https://image.tmdb.org/t/p/original/TU9aNiSLeVW3wVkwvMBOKfBnKkq.jpg",
+    rating: 8.5,
+    genre: ["Thriller", "Drama", "Comedy"],
+    duration: "132 min",
+    description: "Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.",
+    showtimes: ["12:00 PM", "3:30 PM", "7:00 PM", "10:30 PM"],
+    price: 12.99,
+    featured: false,
+    year: 2019
+  },
+  {
+    id: "mov_7",
+    title: "Spider-Man: Across the Spider-Verse",
+    poster: "https://image.tmdb.org/t/p/w500/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg",
+    backdrop: "https://image.tmdb.org/t/p/original/4HodYYKEIsGOdinkGi2Ucz6X9i0.jpg",
+    rating: 8.6,
+    genre: ["Animation", "Action", "Adventure"],
+    duration: "140 min",
+    description: "Miles Morales catapults across the Multiverse, where he encounters a team of Spider-People charged with protecting its very existence.",
+    showtimes: ["10:00 AM", "1:00 PM", "4:00 PM", "7:30 PM"],
+    price: 13.99,
+    featured: false,
+    year: 2023
+  },
+  {
+    id: "mov_8",
+    title: "Oppenheimer",
+    poster: "https://image.tmdb.org/t/p/w500/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg",
+    backdrop: "https://image.tmdb.org/t/p/original/nb3xI8XI3w4pMVZ38VijbA26iBo.jpg",
+    rating: 8.3,
+    genre: ["Drama", "History", "Thriller"],
+    duration: "180 min",
+    description: "The story of American scientist J. Robert Oppenheimer and his role in the development of the atomic bomb during World War II.",
+    showtimes: ["11:00 AM", "2:30 PM", "6:00 PM", "9:30 PM"],
+    price: 14.99,
+    featured: false,
+    year: 2023
+  },
+  {
+    id: "mov_9",
+    title: "Dune: Part Two",
+    poster: "https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg",
+    backdrop: "https://image.tmdb.org/t/p/original/xOMo8BRK7PfcJv9JCnx7s5hj0PX.jpg",
+    rating: 8.5,
+    genre: ["Sci-Fi", "Adventure", "Drama"],
+    duration: "166 min",
+    description: "Paul Atreides unites with Chani and the Fremen while on a warpath of revenge against the conspirators who destroyed his family.",
+    showtimes: ["9:00 AM", "12:30 PM", "4:00 PM", "7:30 PM"],
+    price: 15.99,
+    featured: false,
+    year: 2024
+  },
+  {
+    id: "mov_10",
+    title: "The Shawshank Redemption",
+    poster: "https://image.tmdb.org/t/p/w500/9cjIGRQL5jLOTYZxJWsTq9IkVnv.jpg",
+    backdrop: "https://image.tmdb.org/t/p/original/kXfqcdQKsToO0OUXHcrrNCHDBzO.jpg",
+    rating: 9.3,
+    genre: ["Drama"],
+    duration: "142 min",
+    description: "Over the course of several years, two convicts form a friendship, seeking consolation and, eventually, redemption through basic compassion.",
+    showtimes: ["10:30 AM", "2:00 PM", "5:30 PM", "9:00 PM"],
+    price: 11.99,
+    featured: false,
+    year: 1994
+  }
+];
+
+export const genres = [
+  "All",
+  "Action",
+  "Adventure",
+  "Animation",
+  "Comedy",
+  "Crime",
+  "Drama",
+  "History",
+  "Sci-Fi",
+  "Thriller"
+];
+
+export const theatres = [
+  { id: "th_1", name: "CineVerse IMAX", location: "Downtown" },
+  { id: "th_2", name: "CineVerse Premium", location: "Mall of City" },
+  { id: "th_3", name: "CineVerse Gold", location: "Westside" }
+];
