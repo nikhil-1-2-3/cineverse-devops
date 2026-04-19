@@ -4,6 +4,7 @@ pipeline {
     environment {
         IMAGE = "singhnikhil212/cineverse"
         TAG = "${BUILD_NUMBER}"
+        KUBECONFIG = "C:\\Users\\nikhil singh\\.kube\\config"
     }
 
     stages {
@@ -26,15 +27,13 @@ pipeline {
             }
         }
 
-        stage('Set Kubeconfig') {
-            steps {
-                bat 'set KUBECONFIG=C:\\Users\\nikhil singh\\.kube\\config'
-            }
-        }
-
         stage('Deploy Kubernetes') {
             steps {
-                bat "kubectl set image deployment/cineverse cineverse=%IMAGE%:%TAG%"
+                bat """
+                kubectl config current-context
+                kubectl get pods
+                kubectl set image deployment/cineverse cineverse=%IMAGE%:%TAG%
+                """
             }
         }
     }
