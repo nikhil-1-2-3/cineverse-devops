@@ -26,6 +26,12 @@ pipeline {
             }
         }
 
+        stage('Set Kubeconfig') {
+            steps {
+                bat 'set KUBECONFIG=C:\\Users\\nikhil singh\\.kube\\config'
+            }
+        }
+
         stage('Deploy Kubernetes') {
             steps {
                 bat "kubectl set image deployment/cineverse cineverse=%IMAGE%:%TAG%"
